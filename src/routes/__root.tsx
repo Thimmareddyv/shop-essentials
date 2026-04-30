@@ -1,6 +1,9 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { CartProvider } from "@/context/CartContext";
+import { CartSheet } from "@/components/CartSheet";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -29,14 +32,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Minimal.store — Modern E-Commerce" },
+      {
+        name: "description",
+        content:
+          "Browse a curated selection of products. Clean, minimal e-commerce demo built with TanStack Start.",
+      },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Minimal.store — Modern E-Commerce" },
+      {
+        property: "og:description",
+        content: "Clean, minimal e-commerce demo with cart and product detail.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -65,5 +74,11 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <CartProvider>
+      <Outlet />
+      <CartSheet />
+      <Toaster />
+    </CartProvider>
+  );
 }
