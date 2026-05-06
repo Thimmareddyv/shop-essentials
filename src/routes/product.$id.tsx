@@ -118,7 +118,7 @@ function ProductDetail() {
             </div>
             {images.length > 1 && (
               <div className="flex gap-2 overflow-x-auto">
-                {images.map((src) => (
+                {images.map((src: string) => (
                   <button
                     key={src}
                     onClick={() => setActiveImg(src)}

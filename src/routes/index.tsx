@@ -52,7 +52,7 @@ function Index() {
     const q = search.trim().toLowerCase();
     if (!q) return products;
     return products.filter(
-      (p) =>
+      (p: typeof products[number]) =>
         p.title.toLowerCase().includes(q) ||
         p.category?.toLowerCase().includes(q) ||
         p.brand?.toLowerCase().includes(q),
