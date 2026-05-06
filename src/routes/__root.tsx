@@ -46,6 +46,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Minimal.store — Modern E-Commerce" },
+      { name: "description", content: "Shop Essentials is a frontend e-commerce application that displays products and allows users to add them to a cart." },
+      { property: "og:description", content: "Shop Essentials is a frontend e-commerce application that displays products and allows users to add them to a cart." },
+      { name: "twitter:description", content: "Shop Essentials is a frontend e-commerce application that displays products and allows users to add them to a cart." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5dda6407-bf1f-4a52-b8de-ded2b1ae8c03/id-preview-cce058bb--6c90a87f-e24f-4f25-b5ae-b2498682f074.lovable.app-1777570968497.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5dda6407-bf1f-4a52-b8de-ded2b1ae8c03/id-preview-cce058bb--6c90a87f-e24f-4f25-b5ae-b2498682f074.lovable.app-1777570968497.png" },
     ],
     links: [
       {
